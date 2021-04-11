@@ -1,25 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import loadable from '@loadable/component';
+import Header from './сomponents/Header';
+import Main from './сomponents/Main';
+import Footer from './сomponents/Footer';
+import PrimaryLoader from './сomponents/PrimaryLoader';
+import useTheme from './hooks/useTheme';
+import GlobalStyle from './global-style';
+import { Container } from './App.style';
 
-function App() {
+const HomePage = loadable(() => import(/* webpackPrefetch: true */ './pages/Home'), { fallback: <PrimaryLoader /> });
+const GiftCardsPage = loadable(() => import(/* webpackPrefetch: true */ './pages/GiftCards'), { fallback: <PrimaryLoader /> });
+const MenuPage = loadable(() => import(/* webpackPrefetch: true */ './pages/Menu'), { fallback: <PrimaryLoader /> });
+const RewardsPage = loadable(() => import(/* webpackPrefetch: true */ './pages/Rewards'), { fallback: <PrimaryLoader /> });
+const NotFoundPage = loadable(() => import(/* webpackPrefetch: true */ './pages/NotFound'), { fallback: <PrimaryLoader /> });
+
+const App = () => {
+  const { theme } = useTheme();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Container>
+        <Header />
+        <Main>
+          <Switch>
+            <Route exact path="/"><HomePage /></Route>
+            <Route exact path="/gift"><GiftCardsPage /></Route>
+            <Route exact path="/menu"><MenuPage /></Route>
+            <Route exact path="/rewards"><RewardsPage /></Route>
+            <Route path="*"><NotFoundPage /></Route>
+          </Switch>
+        </Main>
+        <Footer />
+      </Container>
+    </ThemeProvider>
   );
 }
 
