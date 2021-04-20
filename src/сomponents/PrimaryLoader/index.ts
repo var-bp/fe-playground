@@ -1,1 +1,1 @@
-export { default } from './PrimaryLoader';
+export {default} from './PrimaryLoader';

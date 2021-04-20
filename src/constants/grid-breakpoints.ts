@@ -1,4 +1,4 @@
-import { generateMedia } from "styled-media-query";
+import {generateMedia} from 'styled-media-query';
 
 // https://getbootstrap.com/docs/5.0/layout/breakpoints/
 export const GRID_BREAKPOINTS = {
@@ -7,7 +7,7 @@ export const GRID_BREAKPOINTS = {
   md: '768px',
   lg: '992px',
   xl: '1200px',
-  xxl: '1400px'
+  xxl: '1400px',
 };
 
 // https://github.com/morajabi/styled-media-query#-usage

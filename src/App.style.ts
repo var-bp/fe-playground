@@ -6,9 +6,9 @@ export const Container = styled.div`
   grid-template-columns: auto;
   grid-template-rows: min-content auto min-content;
   grid-template-areas:
-    "head"
-    "body"
-    "footer";
+    'head'
+    'body'
+    'footer';
 
   > header {
     grid-area: head;

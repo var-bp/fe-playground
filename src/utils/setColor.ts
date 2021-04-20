@@ -1,10 +1,10 @@
-import { Themes } from '../hooks/useTheme';
+import {Themes} from '../hooks/useTheme';
 
 const setColor = (
   themeName: Themes,
   defaultColor: string,
   darkColor?: string,
-  lightColor?: string
+  lightColor?: string,
 ): string | undefined => {
   const color = {
     default: defaultColor,

@@ -1,1 +1,1 @@
-export { default } from './GiftCards';
+export {default} from './GiftCards';

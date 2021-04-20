@@ -1,0 +1,8 @@
+build/
+node_modules/
+coverage/
+public/
+.idea/
+.vscode/
+package.json
+package-lock.json

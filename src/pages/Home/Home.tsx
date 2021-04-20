@@ -1,7 +1,7 @@
-const Home = () => {
-  return (
-    <div>Home</div>
-  );
+import * as React from 'react';
+
+const Home = (): JSX.Element => {
+  return <div>Home</div>;
 };
 
 export default Home;

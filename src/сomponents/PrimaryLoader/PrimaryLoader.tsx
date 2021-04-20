@@ -1,10 +1,7 @@
-import {
-  Container,
-  Spanned,
-  CoffeeCup,
-} from './PrimaryLoader.style';
+import * as React from 'react';
+import {Container, Spanned, CoffeeCup} from './PrimaryLoader.style';
 
-const PrimaryLoader = () => {
+const PrimaryLoader = (): JSX.Element => {
   return (
     <Container>
       <Spanned>
