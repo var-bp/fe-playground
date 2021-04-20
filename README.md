@@ -7,19 +7,5 @@
 7. firebase
 8. MobX
 
-
 https://www.starbucks.com/
 https://app.starbucks.com/
-
-
-back-end:
-Node.js
-Docker
-WebRTC
-Socket.IO (with websockets)
-GraphQL
-Next.js
-MySQL
-MongoDB
-PostgreSQL
-AWS

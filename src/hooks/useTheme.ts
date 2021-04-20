@@ -1,35 +1,30 @@
 import { useState, useEffect } from 'react';
-import { Themes } from '../constants/theme.d';
-import defaultThemeColors from '../constants/default-theme/colors';
-// import defaultThemeTypography from '../constants/default-theme/typography';
 
-const themes: Themes = {
-  default: {
-    ...defaultThemeColors,
-    // ...defaultThemeTypography,
-  },
-};
+export type Themes = 'default' | 'dark' | 'light';
+
+export interface Theme {
+  name: Themes;
+}
 
 const projectName = 'FE_PLAYGROUND_THEME';
 
 const getInitialTheme = () => {
   const theme = localStorage.getItem(projectName);
-  return theme ? JSON.parse(theme) : themes.default;
+  return { name: theme ? JSON.parse(theme) : 'default' };
 };
 
 const useTheme = () => {
-  const [theme, _setTheme] = useState(getInitialTheme);
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
-  const setTheme = (name: 'default') => {
-    const _theme = themes[name];
-    if (_theme) _setTheme(_theme);
+  const switchTheme = (themeName: Themes) => {
+    if (themeName) setTheme({ name: themeName });
   };
 
   useEffect(() => {
-    localStorage.setItem(projectName, JSON.stringify(theme));
+    localStorage.setItem(projectName, JSON.stringify(theme.name));
   }, [theme]);
 
-  return { theme, setTheme };
+  return { theme, switchTheme };
 };
 
 export default useTheme;
