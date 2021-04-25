@@ -5,7 +5,8 @@
 5. fonts https://simonhearne.com/2021/layout-shifts-webfonts
 6. react image (lazy load, placeholder, image size, format)
 7. firebase
-8. MobX
+8. MobX ?
+9. https://typedoc.org/guides/doccomments/
 
 https://www.starbucks.com/
 https://app.starbucks.com/
