@@ -1,8 +1,8 @@
 import * as React from 'react';
-import {Grid} from './Container.style';
+import * as SC from './Container.style';
 
 const Container: React.FC = ({children}) => {
-  return <Grid>{children}</Grid>;
+  return <SC.Grid>{children}</SC.Grid>;
 };
 
 export default Container;

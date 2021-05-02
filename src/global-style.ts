@@ -1,8 +1,9 @@
 import {createGlobalStyle} from 'styled-components';
 import {normalize} from 'polished';
-import {Theme} from '../src/hooks/useTheme';
-import {WHITE} from '../src/constants/colors';
-import setColor from '../src/utils/setColor';
+import {Theme} from './hooks/useTheme';
+import {BACKGROUND_COLOR_PRIMARY, TEXT_COLOR_PRIMARY} from './constants/colors';
+import {FONT_FAMILY_PRIMARY, FONT_WEIGHT_REGULAR} from './constants/typography';
+import setColor from './utils/setColor';
 
 export default createGlobalStyle<{theme: Theme}>`
   ${normalize()}
@@ -20,11 +21,12 @@ export default createGlobalStyle<{theme: Theme}>`
 
   body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${FONT_FAMILY_PRIMARY};
     font-size: 16px;
-    font-weight: 400;
+    font-weight: ${FONT_WEIGHT_REGULAR};
     line-height: 1.5;
-    background-color: ${({theme}) => setColor(theme.name, WHITE)};
+    color: ${({theme}) => setColor(theme.name, TEXT_COLOR_PRIMARY)};
+    background-color: ${({theme}) => setColor(theme.name, BACKGROUND_COLOR_PRIMARY)};
   }
 
   #root {

@@ -1,5 +1,5 @@
 import styled, {keyframes} from 'styled-components';
-import {BLACK, SILVER} from '../../constants/colors';
+import {BORDER_COLOR_PRIMARY, BORDER_COLOR_SECONDARY, BOX_SHADOW_COLOR_PRIMARY} from '../../constants/colors';
 import setColor from '../../utils/setColor';
 
 export const Container = styled.div`
@@ -27,7 +27,7 @@ export const CoffeeCup = styled.div`
   height: 48px;
   margin-top: 30px;
   position: relative;
-  border: 2px solid ${({theme}) => setColor(theme.name, BLACK)};
+  border: 2px solid ${({theme}) => setColor(theme.name, BORDER_COLOR_PRIMARY)};
   border-radius: 0px 0px 10px 10px;
 
   &::after,
@@ -39,7 +39,7 @@ export const CoffeeCup = styled.div`
   &::after {
     width: 10px;
     height: 24px;
-    border: 2px solid ${({theme}) => setColor(theme.name, BLACK)};
+    border: 2px solid ${({theme}) => setColor(theme.name, BORDER_COLOR_PRIMARY)};
     border-left: none;
     border-radius: 0px 40px 40px 0px;
     top: 4px;
@@ -49,13 +49,13 @@ export const CoffeeCup = styled.div`
   &::before {
     width: 1px;
     height: 12px;
-    border: 1px solid ${({theme}) => setColor(theme.name, SILVER)};
+    border: 1px solid ${({theme}) => setColor(theme.name, BORDER_COLOR_SECONDARY)};
     top: -16px;
     left: 7px;
     transform-origin: 0 bottom;
-    box-shadow: 10px 0px 0px 0px ${({theme}) => setColor(theme.name, SILVER)},
-      10px -10px 0px 0px ${({theme}) => setColor(theme.name, SILVER)},
-      20px 0px 0px 0px ${({theme}) => setColor(theme.name, SILVER)};
+    box-shadow: 10px 0px 0px 0px ${({theme}) => setColor(theme.name, BOX_SHADOW_COLOR_PRIMARY)},
+      10px -10px 0px 0px ${({theme}) => setColor(theme.name, BOX_SHADOW_COLOR_PRIMARY)},
+      20px 0px 0px 0px ${({theme}) => setColor(theme.name, BOX_SHADOW_COLOR_PRIMARY)};
     animation: ${steam} 1s linear infinite alternate;
   }
 `;

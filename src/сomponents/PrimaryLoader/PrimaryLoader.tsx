@@ -1,13 +1,13 @@
 import * as React from 'react';
-import {Container, Spanned, CoffeeCup} from './PrimaryLoader.style';
+import * as SC from './PrimaryLoader.style';
 
 const PrimaryLoader = (): JSX.Element => {
   return (
-    <Container>
-      <Spanned>
-        <CoffeeCup />
-      </Spanned>
-    </Container>
+    <SC.Container>
+      <SC.Spanned>
+        <SC.CoffeeCup />
+      </SC.Spanned>
+    </SC.Container>
   );
 };
 
