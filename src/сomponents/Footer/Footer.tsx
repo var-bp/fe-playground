@@ -1,13 +1,18 @@
 import * as React from 'react';
-import Container from '../Container';
+import Grid from '../Grid';
 import * as SC from './Footer.style';
+
+const getFullYear = (): number => {
+  const date = new Date();
+  return date.getFullYear();
+};
 
 const Footer = (): JSX.Element => {
   return (
     <SC.Footer>
-      <Container>
-        <div style={{paddingBottom: '24px', paddingTop: '24px'}} />
-      </Container>
+      <Grid>
+        <small>&copy; Copyright {getFullYear()}, Example Corporation</small>
+      </Grid>
     </SC.Footer>
   );
 };

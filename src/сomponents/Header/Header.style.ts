@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 import {Link, NavLink} from 'react-router-dom';
-import {BACKGROUND_COLOR_PRIMARY, TEXT_COLOR_PRIMARY, TEXT_COLOR_SECONDARY} from '../../constants/colors';
-import {FONT_FAMILY_PRIMARY, FONT_WEIGHT_BOLD} from '../../constants/typography';
-import {LINK_TRANSITION} from '../../constants/transitions';
+import {
+  BACKGROUND_COLOR_PRIMARY,
+  TEXT_COLOR_PRIMARY,
+  TEXT_COLOR_SECONDARY,
+  ICON_COLOR_TERTIARY,
+} from '../../constants/colors';
+import {FONT_FAMILY_PRIMARY, FONT_WEIGHT_BOLD, FONT_WEIGHT_DEMI_BOLD} from '../../constants/typography';
+import {LINK_TRANSITION, ICON_TRANSITION} from '../../constants/transitions';
 import setColor from '../../utils/setColor';
 
 export const Header = styled.header`
@@ -10,9 +15,17 @@ export const Header = styled.header`
   top: 0;
   left: 0;
   width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-color: ${({theme}) => setColor(theme.name, BACKGROUND_COLOR_PRIMARY)};
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.06),
     0px 0px 2px 0px rgba(0, 0, 0, 0.07);
+`;
+
+export const Panel = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const LogotypeLink = styled(Link)`
@@ -23,8 +36,6 @@ export const LogotypeLink = styled(Link)`
 export const NavigationLinks = styled.nav`
   display: flex;
   align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
 `;
 
 export const UnorderedList = styled.ul`
@@ -56,5 +67,48 @@ export const NavigationLink = styled(NavLink)`
   &.active,
   &:hover {
     color: ${({theme}) => setColor(theme.name, TEXT_COLOR_SECONDARY)};
+  }
+`;
+
+export const NavigationLinkWithIcon = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  > div {
+    margin-left: 4px;
+    font-family: ${FONT_FAMILY_PRIMARY};
+    font-weight: ${FONT_WEIGHT_DEMI_BOLD};
+    font-size: 14px;
+    line-height: 1.5;
+    color: ${({theme}) => setColor(theme.name, TEXT_COLOR_PRIMARY)};
+    transition: color ${ICON_TRANSITION};
+  }
+
+  > svg {
+    transition: fill ${ICON_TRANSITION};
+  }
+
+  &.active > div,
+  &:hover > div {
+    color: ${({theme}) => setColor(theme.name, TEXT_COLOR_SECONDARY)};
+  }
+
+  &.active > svg,
+  &:hover > svg {
+    fill: ${({theme}) => setColor(theme.name, ICON_COLOR_TERTIARY)};
+  }
+`;
+
+export const Controls = styled.div`
+  display: flex;
+  align-items: center;
+
+  > button:first-of-type {
+    margin-left: 40px;
+  }
+
+  > button:not(:first-of-type) {
+    margin-left: 15px;
   }
 `;

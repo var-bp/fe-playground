@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Button from '../Button';
 import * as SC from './Card.style';
 
 interface CardProps {
@@ -9,6 +10,9 @@ interface CardProps {
   isVertical: boolean;
   imageSrc: string;
   imageAlt?: string;
+  buttonText: string;
+  buttonColor: string;
+  onButtonClick(e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>): void;
 }
 
 const Card = ({
@@ -19,6 +23,9 @@ const Card = ({
   isVertical,
   imageSrc,
   imageAlt,
+  buttonText,
+  buttonColor,
+  onButtonClick,
 }: CardProps): JSX.Element => {
   return (
     <SC.Container isVertical={isVertical} backgroundColor={backgroundColor}>
@@ -26,6 +33,7 @@ const Card = ({
         <SC.TextContainer>
           <SC.Title>{title}</SC.Title>
           <SC.Text dangerouslySetInnerHTML={{__html: text}} />
+          <Button text={buttonText} buttonColor={buttonColor} onClick={onButtonClick} />
         </SC.TextContainer>
       </SC.Column>
       <SC.Column isVertical={isVertical} order={isColumnReversed ? 1 : 2}>
@@ -40,4 +48,4 @@ Card.defaultProps = {
   isVertical: false,
 };
 
-export default Card;
+export default React.memo(Card);

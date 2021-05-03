@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components';
 import {MEDIA_QUERY} from '../../constants/grid-breakpoints';
 import {HEADING_COLOR_PRIMARY, TEXT_COLOR_TERTIARY} from '../../constants/colors';
-import {FONT_FAMILY_PRIMARY, FONT_WEIGHT_BOLD, FONT_WEIGHT_REGULAR} from '../../constants/typography';
+import {FONT_FAMILY_PRIMARY, FONT_WEIGHT_REGULAR} from '../../constants/typography';
 import {imgFluid} from '../../constants/mixins';
 import setColor from '../../utils/setColor';
 
@@ -42,7 +42,7 @@ export const Column = styled.div<ColumnProps>`
 `;
 
 export const TextContainer = styled.div`
-  padding: 50px;
+  padding: 30px 48px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -53,19 +53,20 @@ export const TextContainer = styled.div`
 export const Title = styled.div`
   margin-bottom: 25px;
   font-family: ${FONT_FAMILY_PRIMARY};
-  font-weight: ${FONT_WEIGHT_BOLD};
-  font-size: 35px;
-  line-height: 1.2;
+  font-weight: ${FONT_WEIGHT_REGULAR};
+  font-size: 24px;
+  line-height: 1.5;
   color: ${({theme}) => setColor(theme.name, HEADING_COLOR_PRIMARY)};
   text-transform: uppercase;
   text-align: center;
 `;
 
 export const Text = styled.div`
+  margin-bottom: 30px;
   font-family: ${FONT_FAMILY_PRIMARY};
   font-weight: ${FONT_WEIGHT_REGULAR};
-  font-size: 24px;
-  line-height: 1.5;
+  font-size: 19px;
+  line-height: 1.75;
   color: ${({theme}) => setColor(theme.name, TEXT_COLOR_TERTIARY)};
   text-align: center;
 `;
