@@ -36,4 +36,4 @@ const Icon = ({name, width, height, color, backgroundColor}: IconProps): JSX.Ele
   return renderIcon(name, width, height, color, backgroundColor);
 };
 
-export default Icon;
+export default React.memo(Icon);

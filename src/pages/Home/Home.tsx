@@ -61,7 +61,7 @@ const Home = (): JSX.Element => {
           <Promo
             title="It's nurse & teacher appreciation week"
             text="Treat these everyday heroes to their favorite food or drinks with a Starbucks Card. <a>Choose an eGift</a>."
-            textContainerMaxWidth="60%"
+            textContainerMaxWidth={isMobile ? 'none' : '60%'}
             titleColor={HEADING_COLOR_SECONDARY}
             textColor={TEXT_COLOR_QUATERNARY}
             backgroundColor={BACKGROUND_COLOR_QUATERNARY}
@@ -135,6 +135,7 @@ const Home = (): JSX.Element => {
             backgroundColor={BACKGROUND_COLOR_TERTIARY}
             title="Honoring AAPI Heritage Month"
             text="This Asian American and Pacific Islander Heritage Month, see how these partners (employees) are finding community across cultures."
+            isColumnReversed
             imageSrc="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-70995.jpg"
             imageAlt="Collage of the three featured Starbucks partners (employees) wearing masks."
             buttonText="See more"

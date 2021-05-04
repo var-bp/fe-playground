@@ -48,4 +48,8 @@ export const Title = styled.div`
   color: ${({theme}) => setColor(theme.name, HEADING_COLOR_PRIMARY)};
   text-transform: uppercase;
   text-align: center;
+
+  ${MEDIA_QUERY.lessThan('lg')`
+    font-size: 28px;
+  `}
 `;

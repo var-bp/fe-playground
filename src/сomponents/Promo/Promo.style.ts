@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {FONT_FAMILY_PRIMARY, FONT_WEIGHT_REGULAR, FONT_WEIGHT_BOLD} from '../../constants/typography';
+import {MEDIA_QUERY} from '../../constants/grid-breakpoints';
 import setColor from '../../utils/setColor';
 
 interface ContainerProps {
@@ -18,6 +19,16 @@ interface TextProps {
 export const Container = styled.div<ContainerProps>`
   padding: 30px;
   background-color: ${({theme, backgroundColor}) => setColor(theme.name, backgroundColor)};
+
+  ${MEDIA_QUERY.lessThan('lg')`
+    padding-left: 80px;
+    padding-right: 80px;
+  `}
+
+  ${MEDIA_QUERY.lessThan('md')`
+    padding-left: 30px;
+    padding-right: 30px;
+  `}
 `;
 
 export const TextContainer = styled.div<TextContainerProps>`
@@ -35,6 +46,10 @@ export const Title = styled.div<TitleProps>`
   text-align: center;
   text-transform: uppercase;
   color: ${({theme, color}) => setColor(theme.name, color)};
+
+  ${MEDIA_QUERY.lessThan('lg')`
+    font-size: 28px;
+  `}
 `;
 
 export const Text = styled.div<TextProps>`
@@ -54,4 +69,8 @@ export const Text = styled.div<TextProps>`
       text-decoration: none;
     }
   }
+
+  ${MEDIA_QUERY.lessThan('lg')`
+    font-size: 24px;
+  `}
 `;

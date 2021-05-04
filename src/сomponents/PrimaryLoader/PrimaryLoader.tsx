@@ -11,4 +11,4 @@ const PrimaryLoader = (): JSX.Element => {
   );
 };
 
-export default PrimaryLoader;
+export default React.memo(PrimaryLoader);

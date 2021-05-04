@@ -13,11 +13,14 @@ import {
 import Grid from '../Grid';
 import Button from '../Button';
 import Icon from '../Icon';
+import Hamburger from './Hamburger';
 import * as SC from './Header.style';
 
 const Header = (): JSX.Element => {
   const {push} = useHistory();
   const {pathname} = useLocation();
+
+  const [isOpen, setIsOpen] = React.useState(false);
 
   const goToInternalLink = React.useCallback(
     (link: string) => () => {
@@ -61,6 +64,12 @@ const Header = (): JSX.Element => {
             {pathname !== REGISTRATION_ROUT && (
               <Button buttonStyle="secondary" text="Join now" onClick={goToInternalLink(REGISTRATION_ROUT)} />
             )}
+            <Hamburger
+              isActive={isOpen}
+              onClick={() => {
+                setIsOpen(s => !s);
+              }}
+            />
           </SC.Controls>
         </SC.Panel>
       </Grid>
@@ -68,4 +77,4 @@ const Header = (): JSX.Element => {
   );
 };
 
-export default Header;
+export default React.memo(Header);
