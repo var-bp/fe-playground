@@ -42,12 +42,19 @@ export const Column = styled.div<ColumnProps>`
 `;
 
 export const TextContainer = styled.div`
-  padding: 30px 48px;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  ${MEDIA_QUERY.greaterThan('lg')`
+    padding: 30px 48px;
+  `}
+
+  ${MEDIA_QUERY.lessThan('lg')`
+    padding: 20px;
+  `}
 `;
 
 export const Title = styled.div`

@@ -26,8 +26,7 @@ export const Container = styled.div<ContainerProps>`
   `}
 
   ${MEDIA_QUERY.lessThan('md')`
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 20px;
   `}
 `;
 
