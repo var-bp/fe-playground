@@ -1,5 +1,7 @@
 import styled from 'styled-components';
+import {MEDIA_QUERY} from '../../constants/grid-breakpoints';
 import {FONT_FAMILY_PRIMARY, FONT_WEIGHT_BOLD, FONT_WEIGHT_REGULAR} from '../../constants/typography';
+import {imgFluid} from '../../constants/mixins';
 import {
   HEADING_COLOR_TERTIARY,
   TEXT_COLOR_PRIMARY,
@@ -22,45 +24,82 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   > div {
     display: flex;
+
+    ${MEDIA_QUERY.lessThan('xl')`
+      flex-direction: column;
+      margin-top: -32vw;
+    `}
   }
 `;
 
 export const ImageContainer = styled.div`
-  position: relative;
-  width: 360px;
-  height: 126px;
+  ${MEDIA_QUERY.greaterThan('xl')`
+    position: relative;
+    width: 360px;
+    height: 126px;
+  `}
 `;
 
 export const Image = styled.img`
-  position: absolute;
-  top: -112px;
-  right: 0;
-  object-fit: contain;
-  height: 285px;
+  ${MEDIA_QUERY.greaterThan('xl')`
+    position: absolute;
+    top: -112px;
+    right: 0;
+    object-fit: contain;
+    height: 285px;
+  `}
+
+  ${MEDIA_QUERY.lessThan('xl')`
+    ${imgFluid}
+  `}
 `;
 
 export const TextContainer = styled.div`
-  padding-left: 20px;
+  ${MEDIA_QUERY.greaterThan('xl')`
+    padding-left: 20px;
+  `}
+
+  ${MEDIA_QUERY.lessThan('xl')`
+    padding-left: 5px;
+    padding-right: 5px;
+  `}
 
   > div:nth-child(1) {
     margin-bottom: 5px;
     font-family: ${FONT_FAMILY_PRIMARY};
     font-weight: ${FONT_WEIGHT_BOLD};
-    font-size: 36px;
     line-height: 1.29;
     color: ${({theme}) => setColor(theme.name, HEADING_COLOR_TERTIARY)};
+
+    ${MEDIA_QUERY.greaterThan('xl')`
+      font-size: 36px;
+    `}
+
+    ${MEDIA_QUERY.lessThan('xl')`
+      font-size: 28px;
+      text-align: center;
+    `}
   }
 
   > div:nth-child(2) {
     margin-bottom: 15px;
     font-family: ${FONT_FAMILY_PRIMARY};
     font-weight: ${FONT_WEIGHT_REGULAR};
-    font-size: 24px;
     line-height: 1.5;
     color: ${({theme}) => setColor(theme.name, TEXT_COLOR_PRIMARY)};
+
+    ${MEDIA_QUERY.greaterThan('xl')`
+      font-size: 24px;
+    `}
+
+    ${MEDIA_QUERY.lessThan('xl')`
+      font-size: 19px;
+      text-align: center;
+    `}
   }
 
   > div:nth-child(3) {
@@ -69,5 +108,14 @@ export const TextContainer = styled.div`
     font-size: 16px;
     line-height: 1.5;
     color: ${({theme}) => setColor(theme.name, TEXT_COLOR_QUINARY)};
+
+    ${MEDIA_QUERY.greaterThan('xl')`
+      font-size: 16px;
+    `}
+
+    ${MEDIA_QUERY.lessThan('xl')`
+      font-size: 14px;
+      text-align: center;
+    `}
   }
 `;

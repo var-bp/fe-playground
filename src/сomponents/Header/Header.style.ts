@@ -6,6 +6,7 @@ import {
   TEXT_COLOR_SECONDARY,
   ICON_COLOR_TERTIARY,
 } from '../../constants/colors';
+import {MEDIA_QUERY} from '../../constants/grid-breakpoints';
 import {FONT_FAMILY_PRIMARY, FONT_WEIGHT_BOLD, FONT_WEIGHT_DEMI_BOLD} from '../../constants/typography';
 import {LINK_TRANSITION, ICON_TRANSITION} from '../../constants/transitions';
 import setColor from '../../utils/setColor';
@@ -20,6 +21,12 @@ export const Header = styled.header`
   background-color: ${({theme}) => setColor(theme.name, BACKGROUND_COLOR_PRIMARY)};
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.06),
     0px 0px 2px 0px rgba(0, 0, 0, 0.07);
+  z-index: 101;
+
+  ${MEDIA_QUERY.lessThan('lg')`
+    padding-top: 15px;
+    padding-bottom: 15px;
+  `}
 `;
 
 export const Panel = styled.div`
@@ -111,4 +118,25 @@ export const Controls = styled.div`
   > button:not(:first-of-type) {
     margin-left: 15px;
   }
+`;
+
+export const Separator = styled.div`
+  margin: 15px 15px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  padding-bottom: 30px;
+
+  > button:not(:first-of-type) {
+    margin-left: 15px;
+  }
+`;
+
+export const LocationContainer = styled.div`
+  padding-left: 15px;
+  padding-bottom: 30px;
 `;

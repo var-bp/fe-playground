@@ -8,7 +8,7 @@ import {
   HEADING_COLOR_SECONDARY,
   TEXT_COLOR_QUATERNARY,
 } from '../../constants/colors';
-import {CONTAINER_WIDTH} from '../../constants/grid-breakpoints';
+import {MEDIA_QUERY_WIDTH} from '../../constants/grid-breakpoints';
 import {
   GIFT_ROUT,
   MENU_ROUT,
@@ -23,7 +23,7 @@ import Promo from '../../сomponents/Promo';
 import Grid from '../../сomponents/Grid';
 import * as SC from './Home.style';
 
-const mediaQueryList = window.matchMedia(`(max-width: ${CONTAINER_WIDTH.lg})`);
+const mediaQueryList = window.matchMedia(`(max-width: ${MEDIA_QUERY_WIDTH.lg})`);
 
 const Home = (): JSX.Element => {
   const {push} = useHistory();

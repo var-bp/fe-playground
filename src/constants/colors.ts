@@ -5,6 +5,7 @@ export const BACKGROUND_COLOR_SECONDARY = '#f1f8f6';
 export const BACKGROUND_COLOR_TERTIARY = '#f2f0eb';
 export const BACKGROUND_COLOR_QUATERNARY = '#1e3932';
 export const BACKGROUND_COLOR_QUINARY = '#f7f7f7';
+export const BACKGROUND_COLOR_SENARY = '#000000';
 
 export const TEXT_COLOR_PRIMARY = '#000000';
 export const TEXT_COLOR_SECONDARY = '#008248';

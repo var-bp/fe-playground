@@ -12,11 +12,13 @@ export const CONTAINER_WIDTH = {
   xxl: '1320px',
 };
 
-// https://github.com/morajabi/styled-media-query#-usage
-export const MEDIA_QUERY = generateMedia({
+export const MEDIA_QUERY_WIDTH = {
   sm: '576px',
   md: '768px',
   lg: '992px',
   xl: '1200px',
   xxl: '1400px',
-});
+};
+
+// https://github.com/morajabi/styled-media-query#-usage
+export const MEDIA_QUERY = generateMedia(MEDIA_QUERY_WIDTH);

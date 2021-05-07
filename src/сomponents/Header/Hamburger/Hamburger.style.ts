@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components';
-import {BACKGROUND_COLOR_TERTIARY} from '../../../constants/colors';
+import {BACKGROUND_COLOR_TERTIARY, BACKGROUND_COLOR_SENARY} from '../../../constants/colors';
 import setColor from '../../../utils/setColor';
 
 interface CommonProps {
@@ -8,10 +8,10 @@ interface CommonProps {
 
 export const Circle = styled.div`
   position: absolute;
-  top: -53%;
-  right: -53%;
-  width: 50px;
-  height: 50px;
+  top: -45%;
+  right: -46%;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   background-color: transparent;
   transform: scale(0.4);
@@ -19,7 +19,7 @@ export const Circle = styled.div`
 `;
 
 export const Button = styled.button<CommonProps>`
-  padding: 15px;
+  padding: 11px;
   display: block;
   cursor: pointer;
   text-transform: none;
@@ -28,7 +28,7 @@ export const Button = styled.button<CommonProps>`
   margin: 0;
   overflow: visible;
 
-  &:hover ${Circle} {
+  &:active ${Circle} {
     transform: scale(1);
     background-color: ${({theme}) => setColor(theme.name, BACKGROUND_COLOR_TERTIARY)};
   }
@@ -47,7 +47,7 @@ export const Inner = styled.div<CommonProps>`
   z-index: 2;
   width: 24px;
   height: 2px;
-  background-color: ${({theme, isActive}) => setColor(theme.name, isActive ? '#000' : '#000')};
+  background-color: ${({theme}) => setColor(theme.name, BACKGROUND_COLOR_SENARY)};
   border-radius: 10px;
   position: absolute;
 
@@ -69,7 +69,7 @@ export const Inner = styled.div<CommonProps>`
     display: block;
     width: 24px;
     height: 2px;
-    background-color: ${({theme, isActive}) => setColor(theme.name, isActive ? '#000' : '#000')};
+    background-color: ${({theme}) => setColor(theme.name, BACKGROUND_COLOR_SENARY)};
     border-radius: 10px;
     position: absolute;
   }
