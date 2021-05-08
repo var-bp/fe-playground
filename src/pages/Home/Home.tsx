@@ -74,6 +74,8 @@ const Home = (): JSX.Element => {
             title="Free coffee is a tap away"
             text="Join now to start earning Rewards."
             imageSrc="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-70876.png"
+            imageHeight="840"
+            imageWidth="1440"
             imageAlt="Illustrative radiating Starbucks Rewards star."
             buttonText="Order coffee"
             buttonColor={BUTTON_COLOR_TERTIARY}
@@ -86,6 +88,8 @@ const Home = (): JSX.Element => {
             title="Feel-good flavors"
             text="Our Kale & Portabella Mushroom Sous Vide Egg Bites and Southwest Veggie Wrap made for satisfying mornings."
             imageSrc="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-70757.png"
+            imageHeight="1250"
+            imageWidth="1440"
             imageAlt="Two round egg bites sit next to a cut, stacked wrap."
             buttonText="Order hot breakfast"
             buttonColor={BUTTON_COLOR_TERTIARY}
@@ -100,6 +104,8 @@ const Home = (): JSX.Element => {
               title="Order and pick up. Easy as that."
               text="Just open the app, order your favorites, and enjoy contactless pay. From there, choose whichever pickup method is best for you."
               imageSrc="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-70203.jpg"
+              imageHeight="1200"
+              imageWidth="1408"
               imageAlt="Illustrated hand holding a phone with the app open in front of a Starbucks store."
               buttonText="See pickup options"
               buttonColor={BUTTON_COLOR_TERTIARY}
@@ -112,6 +118,8 @@ const Home = (): JSX.Element => {
               title="Earning 4,500 Bonus Stars is Super Starifying"
               text="With a <strong>$0 intro annual fee for your first year</strong>, earn more Stars and even more Rewards with the Starbucks® Rewards Visa® Card"
               imageSrc="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-70878.jpg"
+              imageHeight="1200"
+              imageWidth="1408"
               imageAlt="Starbucks® Rewards Visa® Credit Card in front of large gold star and smaller gold stars."
               buttonText="Learn more"
               buttonColor={BUTTON_COLOR_TERTIARY}
@@ -125,6 +133,8 @@ const Home = (): JSX.Element => {
             text="A Starbucks® delivery on Uber Eats will brighten up any day."
             isColumnReversed
             imageSrc="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-69199.jpg"
+            imageHeight="1250"
+            imageWidth="1440"
             imageAlt="Illustration of a woman sitting on her porch, taking a break from planting flowers with a drink in hand."
             buttonText="Order now"
             buttonColor={BUTTON_COLOR_TERTIARY}
@@ -137,6 +147,8 @@ const Home = (): JSX.Element => {
             text="This Asian American and Pacific Islander Heritage Month, see how these partners (employees) are finding community across cultures."
             isColumnReversed
             imageSrc="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-70995.jpg"
+            imageHeight="800"
+            imageWidth="1440"
             imageAlt="Collage of the three featured Starbucks partners (employees) wearing masks."
             buttonText="See more"
             buttonColor={BUTTON_COLOR_TERTIARY}

@@ -1,22 +1,10 @@
 import styled, {css} from 'styled-components';
-import {BACKGROUND_COLOR_TERTIARY, BACKGROUND_COLOR_SENARY} from '../../../constants/colors';
+import {BACKGROUND_COLOR_SENARY} from '../../../constants/colors';
 import setColor from '../../../utils/setColor';
 
 interface CommonProps {
   isActive: boolean;
 }
-
-export const Circle = styled.div`
-  position: absolute;
-  top: -45%;
-  right: -46%;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background-color: transparent;
-  transform: scale(0.4);
-  transition: background-color 0.2s ease-out, transform 0.2s ease-out;
-`;
 
 export const Button = styled.button<CommonProps>`
   padding: 11px;
@@ -24,13 +12,14 @@ export const Button = styled.button<CommonProps>`
   cursor: pointer;
   text-transform: none;
   background-color: transparent;
-  border: 0;
+  border: none;
   margin: 0;
   overflow: visible;
 
-  &:active ${Circle} {
-    transform: scale(1);
-    background-color: ${({theme}) => setColor(theme.name, BACKGROUND_COLOR_TERTIARY)};
+  &:active,
+  &:focus {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
   }
 `;
 
@@ -44,7 +33,6 @@ export const Inner = styled.div<CommonProps>`
   top: 50%;
   margin-top: -1px;
   transition-property: transform;
-  z-index: 2;
   width: 24px;
   height: 2px;
   background-color: ${({theme}) => setColor(theme.name, BACKGROUND_COLOR_SENARY)};

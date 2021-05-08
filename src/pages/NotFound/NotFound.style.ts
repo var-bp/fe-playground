@@ -51,10 +51,14 @@ export const Image = styled.img`
     right: 0;
     object-fit: contain;
     height: 285px;
+    width: 360px;
   `}
 
   ${MEDIA_QUERY.lessThan('xl')`
-    ${imgFluid}
+    ${
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (props: any) => imgFluid(props.width, props.height)
+    };
   `}
 `;
 

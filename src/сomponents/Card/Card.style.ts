@@ -79,5 +79,8 @@ export const Text = styled.div`
 `;
 
 export const Image = styled.img`
-  ${imgFluid}
+  ${
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (props: any) => imgFluid(props.width, props.height)
+  };
 `;

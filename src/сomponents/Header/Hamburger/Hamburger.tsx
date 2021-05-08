@@ -13,7 +13,6 @@ const Hamburger = ({isActive, onClick}: HamburgerProps): JSX.Element => {
     <SC.Button isActive={isActive} type="button" onClick={onClick}>
       <SC.Box>
         <SC.Inner isActive={isActive} />
-        <SC.Circle />
       </SC.Box>
     </SC.Button>
   );

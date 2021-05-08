@@ -122,7 +122,8 @@ export const Controls = styled.div`
 
 export const Separator = styled.div`
   margin: 15px 15px 30px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
 `;
 
 export const ButtonContainer = styled.div`

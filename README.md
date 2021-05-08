@@ -11,7 +11,5 @@
 https://www.starbucks.com/
 https://app.starbucks.com/
 
-https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/
-
 https://blog.asayer.io/the-definitive-guide-to-profiling-react-applications
 https://reactime.io/

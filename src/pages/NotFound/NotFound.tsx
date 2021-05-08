@@ -10,6 +10,8 @@ const NotFound = (): JSX.Element => {
           <div>
             <SC.ImageContainer>
               <SC.Image
+                width="556"
+                height="440"
                 src="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-49623.gif"
                 alt="Oops! We can’t find the page that you’re looking for."
               />

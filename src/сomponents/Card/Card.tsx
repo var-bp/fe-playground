@@ -9,6 +9,8 @@ interface CardProps {
   isColumnReversed?: boolean;
   isVertical: boolean;
   imageSrc: string;
+  imageHeight: string;
+  imageWidth: string;
   imageAlt?: string;
   buttonText: string;
   buttonColor: string;
@@ -22,6 +24,8 @@ const Card = ({
   isColumnReversed,
   isVertical,
   imageSrc,
+  imageHeight,
+  imageWidth,
   imageAlt,
   buttonText,
   buttonColor,
@@ -37,7 +41,7 @@ const Card = ({
         </SC.TextContainer>
       </SC.Column>
       <SC.Column isVertical={isVertical} order={isColumnReversed ? 1 : 2}>
-        <SC.Image src={imageSrc} alt={imageAlt} />
+        <SC.Image height={imageHeight} width={imageWidth} src={imageSrc} alt={imageAlt} />
       </SC.Column>
     </SC.Container>
   );
