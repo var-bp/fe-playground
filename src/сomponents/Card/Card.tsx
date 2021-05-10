@@ -41,7 +41,7 @@ const Card = ({
         </SC.TextContainer>
       </SC.Column>
       <SC.Column isVertical={isVertical} order={isColumnReversed ? 1 : 2}>
-        <SC.Image height={imageHeight} width={imageWidth} src={imageSrc} alt={imageAlt} />
+        <SC.Image height={imageHeight} width={imageWidth} src={imageSrc} alt={imageAlt} loading="lazy" />
       </SC.Column>
     </SC.Container>
   );

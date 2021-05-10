@@ -11,5 +11,8 @@
 https://www.starbucks.com/
 https://app.starbucks.com/
 
+https://basarat.gitbook.io/typescript/
+https://www.typescriptlang.org/docs/handbook/intro.html
+
 https://blog.asayer.io/the-definitive-guide-to-profiling-react-applications
 https://reactime.io/
