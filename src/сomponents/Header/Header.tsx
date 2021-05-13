@@ -9,7 +9,7 @@ import {
   SIGN_IN_ROUT,
   REGISTRATION_ROUT,
   STORE_LOCATOR_ROUT,
-} from '../../constants/routs';
+} from '../../constants/routes';
 import Grid from '../Grid';
 import Button from '../Button';
 import Icon from '../Icon';

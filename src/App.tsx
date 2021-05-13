@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import {ThemeProvider} from 'styled-components';
 import loadable from '@loadable/component';
-import {HOME_ROUT, MENU_ROUT, REWARDS_ROUT, GIFT_ROUT} from './constants/routs';
+import {HOME_ROUT, MENU_ROUT, REWARDS_ROUT, GIFT_ROUT} from './constants/routes';
 import Header from './сomponents/Header';
 import Main from './сomponents/Main';
 import Footer from './сomponents/Footer';

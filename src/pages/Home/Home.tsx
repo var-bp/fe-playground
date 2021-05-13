@@ -17,7 +17,7 @@ import {
   SIGN_IN_ROUT,
   UBER_EATS_ROUT,
   STORIES_STARBUCKS_ROUT,
-} from '../../constants/routs';
+} from '../../constants/routes';
 import Card from '../../сomponents/Card';
 import Promo from '../../сomponents/Promo';
 import Grid from '../../сomponents/Grid';
