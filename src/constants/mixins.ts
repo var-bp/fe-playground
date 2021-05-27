@@ -1,5 +1,6 @@
 import {css, FlattenSimpleInterpolation} from 'styled-components';
 
+// https://blog.logrocket.com/jank-free-page-loading-with-media-aspect-ratios/
 // https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/
 export const imgFluid = (width: string, height: string): FlattenSimpleInterpolation => css`
   display: block;
