@@ -6,12 +6,14 @@ export const BACKGROUND_COLOR_TERTIARY = '#f2f0eb';
 export const BACKGROUND_COLOR_QUATERNARY = '#1e3932';
 export const BACKGROUND_COLOR_QUINARY = '#f7f7f7';
 export const BACKGROUND_COLOR_SENARY = '#000000';
+export const BACKGROUND_COLOR_SEPTENARY = '#333333';
 
 export const TEXT_COLOR_PRIMARY = '#000000';
 export const TEXT_COLOR_SECONDARY = '#008248';
 export const TEXT_COLOR_TERTIARY = '#1e3932';
 export const TEXT_COLOR_QUATERNARY = '#ffffff';
 export const TEXT_COLOR_QUINARY = '#8c8c8c';
+export const TEXT_COLOR_SENARY = '#e6e6e6';
 
 export const HEADING_COLOR_PRIMARY = '#1e3932';
 export const HEADING_COLOR_SECONDARY = '#ffffff';
@@ -34,3 +36,5 @@ export const BUTTON_BORDER_COLOR_SECONDARY = '#1e3932';
 export const BUTTON_COLOR_PRIMARY = '#000000';
 export const BUTTON_COLOR_SECONDARY = '#ffffff';
 export const BUTTON_COLOR_TERTIARY = '#1e3932';
+export const BUTTON_COLOR_QUATERNARY = '#bb86fc';
+export const BUTTON_COLOR_QUINARY = '#ab6afb';

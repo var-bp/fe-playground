@@ -6,6 +6,7 @@ import {HOME_ROUT, MENU_ROUT, REWARDS_ROUT, GIFT_ROUT} from './constants/routes'
 import Header from './сomponents/Header';
 import Main from './сomponents/Main';
 import Footer from './сomponents/Footer';
+import SWSnackbar from './сomponents/SWSnackbar';
 import PrimaryLoader from './сomponents/PrimaryLoader';
 import useTheme from './hooks/useTheme';
 import GlobalStyle from './global-style';
@@ -52,6 +53,7 @@ const App = (): JSX.Element => {
         </Main>
         <Footer />
       </SC.Container>
+      <SWSnackbar />
     </ThemeProvider>
   );
 };
